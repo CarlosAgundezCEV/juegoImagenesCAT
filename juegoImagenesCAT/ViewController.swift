@@ -9,17 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    var timer = Timer()
+    var seconds = 5
+    
+    @IBOutlet weak var secondsLeft: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func counter(){
+        
+        seconds -= 1
+        secondsLeft.text = String(seconds)
+        
+        
+        if (seconds == 0){
+            
+            timer.invalidate()
+        }
+        
     }
-
-
+    
+    @IBAction func startButton(_ sender: Any) {
+    
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
+        
+        startButton.isHidden = true
+                     }
+    
+    
+    
 }
 

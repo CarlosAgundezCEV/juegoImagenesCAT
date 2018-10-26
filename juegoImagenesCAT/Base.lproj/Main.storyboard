@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="juegoImagenesCAT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cvi-WU-gfq">
+                                <rect key="frame" x="20" y="144" width="280" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bgE-0O-Fs6">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="93"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhV-qP-EJc">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="93"/>
+                                                <state key="normal" title="Button" image="facebookicon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-Xx-DQZ">
+                                                <rect key="frame" x="96.5" y="0.0" width="87" height="93"/>
+                                                <state key="normal" title="Button" image="facebookicon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-WV-wHw">
+                                                <rect key="frame" x="193.5" y="0.0" width="86.5" height="93"/>
+                                                <state key="normal" title="Button" image="pinteresticon"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="93" id="qfw-rH-AJT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pej-8q-olc">
+                                        <rect key="frame" x="0.0" y="93" width="280" height="93"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucg-2f-T8F">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="93"/>
+                                                <state key="normal" title="Button" image="pinteresticon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOg-sK-stZ">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="93"/>
+                                                <state key="normal" title="Button" image="twittericon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWT-Ea-szC">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="93"/>
+                                                <state key="normal" title="Button" image="twittericon"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="93" id="Hvk-NE-cDb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-Ie-aKa">
+                                        <rect key="frame" x="0.0" y="186" width="280" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-gQ-wm3">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
+                                                <state key="normal" title="Button" image="instagramicon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmm-JV-PcK">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="94"/>
+                                                <state key="normal" title="Button" image="instagramicon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GN-Pj-zso">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="94"/>
+                                                <state key="normal" title="Button" image="pinteresticon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="r4w-5V-ebi"/>
+                                    <constraint firstAttribute="width" constant="280" id="wxk-Pm-ixE"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-2L-0dJ">
+                                <rect key="frame" x="134.5" y="91" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.72560042142868042" green="0.11817901713555153" blue="0.27437197578071093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xds-il-msP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME LEFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3c-Xb-T98">
+                                <rect key="frame" x="122.5" y="65.5" width="75.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LF-h5-T7y">
+                                <rect key="frame" x="125.5" y="505" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Compare">
+                                    <color key="titleColor" red="0.72560042140000003" green="0.11817901710000001" blue="0.2743719758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsj-AY-NK2">
+                                <rect key="frame" x="132" y="454" width="56" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-pm-Isa">
+                                <rect key="frame" x="229" y="455" width="9.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5F-5t-6uW">
+                                <rect key="frame" x="224" y="64" width="30" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="gn5-wc-sQj"/>
+                                    <constraint firstAttribute="height" constant="20" id="pv7-8g-JxC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iqc-pm-Isa" firstAttribute="top" secondItem="cvi-WU-gfq" secondAttribute="bottom" constant="31" id="1ho-vS-q0R"/>
+                            <constraint firstItem="cvi-WU-gfq" firstAttribute="top" secondItem="L5F-5t-6uW" secondAttribute="bottom" constant="60" id="Blf-yb-6PR"/>
+                            <constraint firstItem="9LF-h5-T7y" firstAttribute="top" secondItem="Fsj-AY-NK2" secondAttribute="bottom" constant="30" id="EeF-WO-4ZM"/>
+                            <constraint firstItem="Fsj-AY-NK2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gk4-Cw-GDm"/>
+                            <constraint firstItem="G8z-2L-0dJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OYA-bu-Rbq"/>
+                            <constraint firstItem="G8z-2L-0dJ" firstAttribute="top" secondItem="B3c-Xb-T98" secondAttribute="bottom" constant="5" id="Wha-Y3-buM"/>
+                            <constraint firstItem="Fsj-AY-NK2" firstAttribute="top" secondItem="cvi-WU-gfq" secondAttribute="bottom" constant="30" id="Wwz-Cd-qfM"/>
+                            <constraint firstItem="9LF-h5-T7y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZE1-rI-3nr"/>
+                            <constraint firstItem="cvi-WU-gfq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ep0-gX-wJy"/>
+                            <constraint firstItem="cvi-WU-gfq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hsH-17-czY"/>
+                            <constraint firstItem="cvi-WU-gfq" firstAttribute="top" secondItem="G8z-2L-0dJ" secondAttribute="bottom" constant="23" id="kRH-ud-zBk"/>
+                            <constraint firstItem="L5F-5t-6uW" firstAttribute="leading" secondItem="B3c-Xb-T98" secondAttribute="trailing" constant="26" id="t5X-tP-ofm"/>
+                            <constraint firstItem="iqc-pm-Isa" firstAttribute="leading" secondItem="Fsj-AY-NK2" secondAttribute="trailing" constant="41" id="v9f-CF-k17"/>
+                            <constraint firstItem="B3c-Xb-T98" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w9J-kV-jFm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="secondsLeft" destination="L5F-5t-6uW" id="YvD-3z-WmW"/>
+                        <outlet property="startButton" destination="G8z-2L-0dJ" id="lkw-iQ-YVP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.125" y="128.87323943661971"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebookicon" width="512" height="512"/>
+        <image name="instagramicon" width="512" height="512"/>
+        <image name="pinteresticon" width="512" height="512"/>
+        <image name="twittericon" width="512" height="512"/>
+    </resources>
 </document>
