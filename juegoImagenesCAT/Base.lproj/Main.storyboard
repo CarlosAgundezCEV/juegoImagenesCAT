@@ -34,15 +34,24 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhV-qP-EJc">
                                                 <rect key="frame" x="0.0" y="0.0" width="86.5" height="93"/>
-                                                <state key="normal" title="Button" image="facebookicon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wwe-7S-hdl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-Xx-DQZ">
                                                 <rect key="frame" x="96.5" y="0.0" width="87" height="93"/>
-                                                <state key="normal" title="Button" image="facebookicon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfc-wL-RvA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-WV-wHw">
                                                 <rect key="frame" x="193.5" y="0.0" width="86.5" height="93"/>
-                                                <state key="normal" title="Button" image="pinteresticon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dbo-ES-abz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -54,15 +63,24 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucg-2f-T8F">
                                                 <rect key="frame" x="0.0" y="0.0" width="93.5" height="93"/>
-                                                <state key="normal" title="Button" image="pinteresticon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hC4-Xb-Ixl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOg-sK-stZ">
                                                 <rect key="frame" x="93.5" y="0.0" width="93" height="93"/>
-                                                <state key="normal" title="Button" image="twittericon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LSh-Qb-xbS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWT-Ea-szC">
                                                 <rect key="frame" x="186.5" y="0.0" width="93.5" height="93"/>
-                                                <state key="normal" title="Button" image="twittericon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzg-hG-z68"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -74,15 +92,24 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-gQ-wm3">
                                                 <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
-                                                <state key="normal" title="Button" image="instagramicon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REZ-sJ-frQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmm-JV-PcK">
                                                 <rect key="frame" x="93.5" y="0.0" width="93" height="94"/>
-                                                <state key="normal" title="Button" image="instagramicon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lxq-fJ-n5U"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GN-Pj-zso">
                                                 <rect key="frame" x="186.5" y="0.0" width="93.5" height="94"/>
-                                                <state key="normal" title="Button" image="pinteresticon"/>
+                                                <state key="normal" title="Button" image="apple"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKB-2t-Gaa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -158,6 +185,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonEight" destination="Cmm-JV-PcK" id="QZy-2J-bVi"/>
+                        <outlet property="buttonFive" destination="hOg-sK-stZ" id="CGC-xv-oYP"/>
+                        <outlet property="buttonFour" destination="Ucg-2f-T8F" id="TCr-ZN-dN8"/>
+                        <outlet property="buttonNine" destination="3GN-Pj-zso" id="F6B-2i-Zv1"/>
+                        <outlet property="buttonOne" destination="bhV-qP-EJc" id="vgO-6l-ZRi"/>
+                        <outlet property="buttonSeven" destination="VWq-gQ-wm3" id="uKu-6W-a3u"/>
+                        <outlet property="buttonSix" destination="xWT-Ea-szC" id="v4G-ml-ZQk"/>
+                        <outlet property="buttonThree" destination="gCT-WV-wHw" id="y30-Cw-xdD"/>
+                        <outlet property="buttonTwo" destination="BAY-Xx-DQZ" id="xZa-xF-Hjo"/>
                         <outlet property="secondsLeft" destination="L5F-5t-6uW" id="YvD-3z-WmW"/>
                         <outlet property="startButton" destination="G8z-2L-0dJ" id="lkw-iQ-YVP"/>
                     </connections>
@@ -168,9 +204,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="facebookicon" width="512" height="512"/>
-        <image name="instagramicon" width="512" height="512"/>
-        <image name="pinteresticon" width="512" height="512"/>
-        <image name="twittericon" width="512" height="512"/>
+        <image name="apple" width="512" height="512"/>
     </resources>
 </document>
