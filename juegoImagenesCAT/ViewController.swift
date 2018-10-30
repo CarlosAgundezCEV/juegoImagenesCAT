@@ -13,13 +13,19 @@ class ViewController: UIViewController {
    
     var timer = Timer()
     var seconds = 5
-    var indexImage = -1
+    var indexImage: Int = 0
+    var indexSolution: Int = 0
+    
+    var indexImageSolution: [Int] = [0,0,0,0,0,0,0,0,0]
+    var indexImageUser: [Int] = [0,0,0,0,0,0,0,0,0]
+
     
     @IBOutlet weak var secondsLeft: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
     
-    let imageArray = ["facebookicon", "instagramicon", "twittericon", "pinteresticon"]
+    let imageArray: [UIImage] = [#imageLiteral(resourceName: "facebookicon"),#imageLiteral(resourceName: "instagramicon"),#imageLiteral(resourceName: "pinteresticon"),#imageLiteral(resourceName: "twittericon")]
+    var buttonArray =  [UIButton] ()
         
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
@@ -34,6 +40,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buttonArray = [buttonOne,buttonTwo,buttonThree,buttonFour,buttonFive,buttonSix,buttonSeven,buttonEight,buttonNine]
 
     }
 
@@ -43,11 +51,15 @@ class ViewController: UIViewController {
         secondsLeft.text = String(seconds)
         
         
-        if (seconds == 0){
+        if (seconds == 0) && (startButton.isHidden == false){
             randomImageStart()
+            startButton.isHidden = true
             seconds = 5
-            secondsLeft.text = String(seconds)
-
+            
+        }
+        
+        if (seconds == 0) && (startButton.isHidden == true){
+            timer.invalidate()
         }
         
     }
@@ -57,12 +69,16 @@ class ViewController: UIViewController {
     
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
         
-        startButton.isHidden = true
         randomImageStart()
 
                      }
     
     func randomImageStart(){
+        
+        
+        buttonOne.setImage(imageArray[indexImage], for: UIControlState.normal)
+        
+        
         buttonOne.setImage(randomImage(), for: .normal)
         buttonTwo.setImage(randomImage(), for: .normal)
         buttonThree.setImage(randomImage(), for: .normal)
@@ -72,27 +88,34 @@ class ViewController: UIViewController {
         buttonSeven.setImage(randomImage(), for: .normal)
         buttonEight.setImage(randomImage(), for: .normal)
         buttonNine.setImage(randomImage(), for: .normal)
+        
     }
     
     func randomImage() -> UIImage{
         let unsignedArrayCount = UInt32(imageArray.count)
         let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
         let randomNumber = Int(unsignedRandomNumber)
-        return UIImage(named: imageArray[randomNumber])!
+        indexImageSolution[indexSolution] = randomNumber
+        print(indexImageSolution)
+        return imageArray[randomNumber]
         
     }
     
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        if ((indexImage+1) > imageArray.count) {
+        indexImage = indexImage + 1
+        if (indexImage>=imageArray.count) {
             indexImage = 0;
         }
         
-        //self.buttonOne.image(for: .normal) = [imageArray objectAtIndex:indexImage]
         
-        //sender.setImage(randomImage(), for: .normal)
+        sender.setImage(imageArray[indexImage], for: UIControlState.normal)
         
-    
+        let senderAux = sender.tag - 1
+        
+        indexImageUser[(senderAux)] = indexImage
+        
+        //print(indexImageUser)
         
     }
     
