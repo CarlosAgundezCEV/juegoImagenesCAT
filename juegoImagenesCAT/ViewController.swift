@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
    
     var timer = Timer()
-    var seconds = 5
+    var seconds = 10
     var indexImage: Int = 0
     var indexSolution: Int = 0
     
@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var secondsLeft: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timeLeftLbl: UILabel!
     
+    @IBOutlet weak var youWinLbl: UILabel!
     
     let imageArray: [UIImage] = [#imageLiteral(resourceName: "facebookicon"),#imageLiteral(resourceName: "instagramicon"),#imageLiteral(resourceName: "pinteresticon"),#imageLiteral(resourceName: "twittericon")]
     var buttonArray =  [UIButton] ()
@@ -42,6 +44,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         buttonArray = [buttonOne,buttonTwo,buttonThree,buttonFour,buttonFive,buttonSix,buttonSeven,buttonEight,buttonNine]
+        
+        youWinLbl.text = ""
 
     }
 
@@ -52,14 +56,17 @@ class ViewController: UIViewController {
         
         
         if (seconds == 0) && (startButton.isHidden == false){
-            randomImageStart()
+            putInitialImage()
             startButton.isHidden = true
-            seconds = 5
+            seconds = 20
             
         }
         
         if (seconds == 0) && (startButton.isHidden == true){
             timer.invalidate()
+            timeLeftLbl.text = ""
+            secondsLeft.text = ""
+            compareSolution()
         }
         
     }
@@ -69,36 +76,40 @@ class ViewController: UIViewController {
     
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
         
-        randomImageStart()
+        randomImage()
 
                      }
     
-    func randomImageStart(){
+    
+    func randomImage(){
+        var randomIndex:Int
         
+        for i in 0...8{
+            randomIndex = Int(arc4random_uniform(UInt32(imageArray.count)))
+            indexImageSolution[i] = randomIndex
+            buttonArray[i].setImage(imageArray[randomIndex], for: UIControlState.normal)
+            
+        }
         
-        buttonOne.setImage(imageArray[indexImage], for: UIControlState.normal)
-        
-        
-        buttonOne.setImage(randomImage(), for: .normal)
-        buttonTwo.setImage(randomImage(), for: .normal)
-        buttonThree.setImage(randomImage(), for: .normal)
-        buttonFour.setImage(randomImage(), for: .normal)
-        buttonFive.setImage(randomImage(), for: .normal)
-        buttonSix.setImage(randomImage(), for: .normal)
-        buttonSeven.setImage(randomImage(), for: .normal)
-        buttonEight.setImage(randomImage(), for: .normal)
-        buttonNine.setImage(randomImage(), for: .normal)
-        
+        print(indexImageSolution)
+
     }
     
-    func randomImage() -> UIImage{
-        let unsignedArrayCount = UInt32(imageArray.count)
-        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-        let randomNumber = Int(unsignedRandomNumber)
-        indexImageSolution[indexSolution] = randomNumber
-        print(indexImageSolution)
-        return imageArray[randomNumber]
+    func putInitialImage(){
+        for i in 0...8{
+            buttonArray[i].setImage(#imageLiteral(resourceName: "apple"), for: UIControlState.normal)
+        }
+    }
+    
+    func compareSolution(){
         
+        if (indexImageUser == indexImageSolution){
+            youWinLbl.text = "You win"
+        }else{
+            
+            youWinLbl.text = "You lose"
+        }
+    
     }
     
     
@@ -115,7 +126,6 @@ class ViewController: UIViewController {
         
         indexImageUser[(senderAux)] = indexImage
         
-        //print(indexImageUser)
         
     }
     
